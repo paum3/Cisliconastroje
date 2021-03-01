@@ -96,6 +96,12 @@ Ešte jedna super dôležitá vec. Na týchle zastavenie zvuku je klávesová sk
 
 ```
 
+SC má vinkajúci HELP system dostuný aj na webe  (http://doc.sccode.org/)[http://doc.sccode.org/] tak6e si ho môžete študovať aj vo vlaku, ale vlastne sa teraz aj tak nikam necestuje...
+
+Doporučené čítanie z SC helpu:
+(Setting started tutorial)[http://doc.sccode.org/Browse.html#Tutorials%3EGetting-Started]
+
+
 
 Hudba na vypočutie:
 
@@ -105,6 +111,7 @@ Hudba na vypočutie:
 Doporučená litaratúra
 
 [Thor Magnusson - Sonic Writing](https://www.bloomsbury.com/us/sonic-writing-9781501313868/)
+
 [Web Sonic Writing](http://www.sonicwriting.org/)
 
 SuperCollider video tutoriály (doporučujem pozrieť aspoň prvé tri)
