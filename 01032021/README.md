@@ -5,7 +5,7 @@ SuperCollider
 -------------
 
 Nainštalujte si [SuperCollider](https://supercollider.github.io). SuperCollider je programovací jazyk určený na hudobné aplikácie.
-Najlepšie sa v ňom pracuje keď si zapnete anglickú klávesnicu - kôli rôznym špeciálnym znakom, ktoré sa v ňom využívajú ```[](){}^&$#```
+Najlepšie sa v ňom pracuje keď si zapnete anglickú klávesnicu - kôli rôznym špeciálnym znakom, ktoré sa v ňom využívajú ```[](){}^&$#;:!"```
 
 
 
@@ -57,6 +57,42 @@ s.boot
 
 s.meter
 
+```
+
+jednoduchý theremin
+-------------------
+
+Ešte jedna super dôležitá vec. Na týchle zastavenie zvuku je klávesová skratka ```ctrl + .``` (control + bodka)
+
+```supercollider
+
+{SinOsc.ar(250)}.play // toto bude mozno hlasne, hra iba v jednom kanali
+
+//ctrl + . 
+{SinOsc.ar(250) * 0.2}.play // tichsie
+
+
+//ctrl + . 
+
+{SinOsc.ar(250) * MouseX.kr(0,0.5) ! 2}.play // ovladanie hlasitosti myskou
+
+//ctrl + . 
+
+{SinOsc.ar(MouseY.kr(50,800)) * MouseX.kr(0,0.5) ! 2}.play // .. aj frekvencie
+
+//ctrl + . 
+
+// mysaci theremin s vibratom
+(
+	{
+		SinOsc.ar(
+			MouseY.kr(50,800)  // frekvencia ovladana mysou
+			+ SinOsc.kr(5).range(-20,20) // vibrato
+		)
+		* 0.3 // hlasitost
+		! 2 // stereo
+	}.play
+) // ctrl + enter (spustanie bloku)
 
 ```
 
