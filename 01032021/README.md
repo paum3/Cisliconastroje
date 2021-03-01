@@ -4,7 +4,8 @@
 SuperCollider
 -------------
 
-Nainštalujte si [SuperCollider](https://supercollider.github.io).
+Nainštalujte si [SuperCollider](https://supercollider.github.io). SuperCollider je programovací jazyk určený na hudobné aplikácie.
+Najlepšie sa v ňom pracuje keď si zapnete anglickú klávesnicu - kôli rôznym špeciálnym znakom, ktoré sa v ňom využívajú ```[](){}^&$#```
 
 
 
