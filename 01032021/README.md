@@ -18,7 +18,7 @@ Základy v SC:
 // za takymito dvoma lomitkami je tzv. komentar, to je text ktory sluzi na poznamkovanie kodu
 
 
-3 + 6 // shift + enter, jednosuchá kalkulačka
+3 + 6 // shift + enter, jednoduchá kalkulačka
 
 2 * 5 // čo robí hviezdička ? '*'
 
