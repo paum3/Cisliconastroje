@@ -1,4 +1,5 @@
-# Čísliconástroje
+Čísliconástroje
+---------------
 
 Király: Kreatívne programovanie interaktívnych (digitálnych) nástrojov
 
@@ -11,3 +12,8 @@ dátumy
 ------
 
 - [x] [01marec 09-12] - úvod
+- [ ] [15marec 09-12]
+- [ ] [29marec 09-12]
+- [ ] [12apríl 09-12]
+- [ ] [26apríl 09-12ä
+- [ ] [10máj 09-12]
