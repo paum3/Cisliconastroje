@@ -8,12 +8,10 @@ Nainštalujte si [SuperCollider](https://supercollider.github.io).
 
 
 
-
 Základy v SC:
-
+------------
 
 ```supercollider
-
 
 // Jednotlive prikazy sa spustaju kombinaciou klaves shift + enter (jeden riadok), alebo ctrl + enter (blok kodu)
 // za takymito dvoma lomitkami je tzv. komentar, to je text ktory sluzi na poznamkovanie kodu
@@ -22,6 +20,8 @@ Základy v SC:
 3 + 6 // shift + enter
 
 2.sqrt // odmocnina z 2
+
+prikaz_ktory_neexistuje // ERROR ...
 
 "supercollider".scramble // vyskusajte spustit viac krat po sebe ...
 
@@ -38,7 +38,26 @@ Základy v SC:
 Zvuk v SC
 ---------
 
-Ak chceme robiť so zvukom, musíme to SC špeciáne "povedať" , naštartovaním ```localhost``` audio servera
+Ak chceme robiť so zvukom, musíme to SC špeciáne "povedať" , naštartovaním ```localhost``` audio servera.
+Server ma defaultne 2 audio vstupy a 2 audio vystupy, čo sa da zmeniť nastavením ```options```. Táto časť nebude dôležitá pre náš kurz, ale možno to využijete vo vašom projekte.
+
+```supercollider
+s.boot // pozri post window
+s.meter // level meter
+
+s.quit // quit server
+
+s.options.numInputBusChannels = 1 // nastav jeden vstup
+s.options.numOutputBusChannels = 8 // nastav osem vystupov
+s.options.sampleRate = 48000
+
+// po nastaveni options bootneme server a nastavenia budu aktivne
+s.boot
+
+s.meter
+
+
+```
 
 
 Hudba na vypočutie:
