@@ -18,17 +18,23 @@ Základy v SC:
 // za takymito dvoma lomitkami je tzv. komentar, to je text ktory sluzi na poznamkovanie kodu
 
 
-3 + 6 // shift + enter
+3 + 6 // shift + enter, jednosuchá kalkulačka
+
+2 * 5 // čo robí hviezdička ? '*'
+
+10 / 2 //  a lomítko ?
 
 2.sqrt // odmocnina z 2
 
-prikaz_ktory_neexistuje // ERROR ...
+// ano , v SC bude nejaka matematika, ale na urovni zakladnej skoly, takze ziadne strachy ...
+
+prikaz_ktory_neexistuje // ERROR ... presne na to je dobry post window, vypisuje nam co sa deje a ked spravime chybu, ohlasi ju ...
 
 "supercollider".scramble // vyskusajte spustit viac krat po sebe ...
 
 // blok kodu je uzavrety v okruhlych zatvorkach:
 (
-	"prvy riadok".postln;
+	"prvy riadok".postln; // skuste vymazat bodkociarku
 	"druhy riadok".postln;
 	" a posledny, ktory vypise este raz, lebo SC vzdy vracia poslednu hodnodu. k tomu sa dostaneme neskor".postln;
 
@@ -39,8 +45,8 @@ prikaz_ktory_neexistuje // ERROR ...
 Zvuk v SC
 ---------
 
-Ak chceme robiť so zvukom, musíme to SC špeciáne "povedať" , naštartovaním ```localhost``` audio servera.
-Server ma defaultne 2 audio vstupy a 2 audio vystupy, čo sa da zmeniť nastavením ```options```. Táto časť nebude dôležitá pre náš kurz, ale možno to využijete vo vašom projekte.
+Ak chceme robiť so zvukom, musíme to SC špeciáne "povedať" , spustením ```s.boot```. To čo sa stane po tomto príkaze je, že sa spustí audio server.
+Server ma defaultne 2 audio vstupy a 2 audio vystupy, čo sa da zmeniť nastavením ```options```. Tieto nastavenia nebudú dôležité pre náš kurz, ale možno to využijete vo vašom projekte.
 
 ```supercollider
 s.boot // pozri post window
@@ -114,6 +120,7 @@ Doporučená litaratúra
 
 [Web Sonic Writing](http://www.sonicwriting.org/)
 
-SuperCollider video tutoriály (doporučujem pozrieť aspoň prvé tri)
+
+SuperCollider video tutoriály (doporučujem pozrieť aspoň prvé tri, sú fakt dobré)
 
 [Eli Fieldsteel Supercollider tutorial series](https://www.youtube.com/watch?v=yRzsOOiJ_p4&list=PLPYzvS8A_rTaNDweXe6PX4CXSGq4iEWYC)
