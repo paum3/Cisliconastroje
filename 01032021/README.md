@@ -7,7 +7,7 @@ SuperCollider
 Nainštalujte si [SuperCollider](https://supercollider.github.io).
 
 
-```
+```supercollider
 // Jednotlive prikazy sa svustaju kombinaciou klaves shift + enter (jeden riadok), alebo ctrl + enter (blok kodu)
 
 
