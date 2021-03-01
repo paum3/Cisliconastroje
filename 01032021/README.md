@@ -31,12 +31,12 @@ Nainštalujte si [SuperCollider](https://supercollider.github.io).
 
 
 Hudba na vypočutie:
-(Slovenská elektrooakustická hudba 1966 - 19940[https://monoskop.org/CECM/Anthology_of_Slovak_Electroacoustic_Music]
+[Slovenská elektrooakustická hudba 1966 - 1994](https://monoskop.org/CECM/Anthology_of_Slovak_Electroacoustic_Music)
 
 
 Doporučená litaratúra
-(Thor Magnusson - Sonic Writing)[https://www.bloomsbury.com/us/sonic-writing-9781501313868/]
-(Web Sonic Writing)[http://www.sonicwriting.org/]
+[Thor Magnusson - Sonic Writing](https://www.bloomsbury.com/us/sonic-writing-9781501313868/)
+[Web Sonic Writing](http://www.sonicwriting.org/)
 
 SuperCollider video tutoriály (doporu4ujem pozrieť aspoň prvé tri)
-(Eli Fieldsteel Supercollider tutorial series)[https://www.youtube.com/watch?v=yRzsOOiJ_p4&list=PLPYzvS8A_rTaNDweXe6PX4CXSGq4iEWYC]
+[Eli Fieldsteel Supercollider tutorial series](https://www.youtube.com/watch?v=yRzsOOiJ_p4&list=PLPYzvS8A_rTaNDweXe6PX4CXSGq4iEWYC)
