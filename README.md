@@ -11,9 +11,9 @@ Kurz bude prebiehať online.
 dátumy
 ------
 
-- [x] [01marec 09-12] - úvod
-- [ ] [15marec 09-12]
-- [ ] [29marec 09-12]
-- [ ] [12apríl 09-12]
-- [ ] [26apríl 09-12ä
-- [ ] [10máj 09-12]
+- [x] [01marec 09-12](https://github.com/paum3/Cisliconastroje/tree/main/01032021) - úvod do SC
+- [ ] [15marec 09-12] - interaktívne ovládanie pomocou mobilu, Open Sound Control
+- [ ] [29marec 09-12] - použitie nahrávok
+- [ ] [12apríl 09-12] - mikrofónny vstup
+- [ ] [26apríl 09-12] - individuálna práca na vašom projekte, s mojou prítomnosťou
+- [ ] [10máj 09-12] - prezenácia vašich projektov
