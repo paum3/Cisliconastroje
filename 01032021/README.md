@@ -8,7 +8,10 @@ Nainštalujte si [SuperCollider](https://supercollider.github.io).
 
 
 ```supercollider
-// Jednotlive prikazy sa svustaju kombinaciou klaves shift + enter (jeden riadok), alebo ctrl + enter (blok kodu)
+
+
+// Jednotlive prikazy sa spustaju kombinaciou klaves shift + enter (jeden riadok), alebo ctrl + enter (blok kodu)
+// za takymito dvoma lomitkami je tzv. komentar, to je text ktory sluzi na poznamkovanie kodu
 
 
 3 + 6 // shift + enter
@@ -25,3 +28,15 @@ Nainštalujte si [SuperCollider](https://supercollider.github.io).
 
 ) // kurzor hocikde v ramci bloku a ctrl + enter
 ```
+
+
+Hudba na vypočutie:
+(Slovenská elektrooakustická hudba 1966 - 19940[https://monoskop.org/CECM/Anthology_of_Slovak_Electroacoustic_Music]
+
+
+Doporučená litaratúra
+(Thor Magnusson - Sonic Writing)[https://www.bloomsbury.com/us/sonic-writing-9781501313868/]
+(Web Sonic Writing)[http://www.sonicwriting.org/]
+
+SuperCollider video tutoriály (doporu4ujem pozrieť aspoň prvé tri)
+(Eli Fieldsteel Supercollider tutorial series)[https://www.youtube.com/watch?v=yRzsOOiJ_p4&list=PLPYzvS8A_rTaNDweXe6PX4CXSGq4iEWYC]
