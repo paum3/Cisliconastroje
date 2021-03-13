@@ -7,5 +7,6 @@
 
 ```supercollider
 OSCdef()
+Synth()
 
 ```
