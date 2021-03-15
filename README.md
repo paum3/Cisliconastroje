@@ -14,7 +14,7 @@ dátumy
 ------
 
 - [x] [01marec 09-12](https://github.com/paum3/Cisliconastroje/tree/main/01032021) - úvod do SC
-- [ ] [15marec 09-12] - interaktívne ovládanie pomocou mobilu, Open Sound Control
+- [x] [15marec 09-12](https://github.com/paum3/Cisliconastroje/tree/main/15032021)  - interaktívne ovládanie pomocou mobilu, Open Sound Control
 - [ ] [29marec 09-12] - použitie nahrávok, Buffer
 - [ ] [12apríl 09-12] - mikrofónny vstup
 - [ ] [26apríl 09-12] - individuálna práca na vašom projekte
