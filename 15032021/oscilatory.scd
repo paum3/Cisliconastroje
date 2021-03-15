@@ -3,7 +3,7 @@
 s.boot
 
 
-
+// zakladne zvukove vlny
 (
 	{
 		[
@@ -16,14 +16,8 @@ s.boot
 	}.plot(0.8)
 )
 
-[
-	4,
-	54,
-	6,
-	7,
-	87
-]
 
+// vplyv zmeny amplitudy na SinOsc
 (
 	{
 		[
@@ -38,14 +32,19 @@ s.boot
 )
 
 s.scope
-
+// ak je mys prilis vpravo, ide do hodnot vyssych ako 1, co zapricini skereslenie
 {SinOsc.ar(800) * MouseX.kr(0,2)}.play
 
 
+// modulacia frekvencie
+{SinOsc.ar( 440 + (LFSaw.kr(0.5) * 20  )  * 0.5  ! 2) }.play // mala zmena
+// ctrl + .
 {SinOsc.ar( 440 + (LFSaw.kr(0.5) * 200  )  * 0.5  ! 2) }.play
-
-
-{SinOsc.ar( 440 + (LFTri.kr(0.5) * 200  )  * 0.5  ! 2) }.play
+// ctrl + .
+{SinOsc.ar( 440 + (LFSaw.kr( SinOsc.kr(0.5).range(0.1,18) ) * 200  )  * 0.5  ! 2) }.play
+// ctrl + .
+{SinOsc.ar( 440 + (LFTri.kr(0.5) * 400  )  * 0.5  ! 2) }.play
+// ctrl + .
 
 // to iste
 (
@@ -53,9 +52,9 @@ s.scope
 		{
 			var freq = 440;
 			var amp = 0.5;
-			var mod = LFTri.kr(0.5) * 200;
+			var mod = LFTri.kr(0.5) * 400;
 			var sig = SinOsc.ar(freq + mod) * amp;
-			sig
+			sig ! 2
 		}.play
 
 
