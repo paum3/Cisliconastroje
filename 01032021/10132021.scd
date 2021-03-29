@@ -1,3 +1,8 @@
+//////////////////////////////////////////////////
+///////////// 1 //////////////////////////////////
+//////////////////////////////////////////////////
+
+
 
 
 // SuperCollider je objektovo orientovany jazyk pre zvukovy syntezu, hudobnu kompoziciu,  experimentovanie so zvukom, vytvaranie novych nastrojov, grafiku, networking  a tak dalej
@@ -21,9 +26,8 @@
 
 
 
-// vzdy ked spistime kod, do POST WINDOW sa vypise hlaska, ak je tam ERROR, chybicka se vloudila, nastasite sa to da opravit
+// vzdy ked spustime kod, do POST WINDOW sa vypise hlaska, ak je tam ERROR, chybicka se vloudila, nastasite sa to da opravit
 // vykona sa len to co spustime
-
 
 
 
@@ -42,7 +46,7 @@ pi
 
 10 / 2 //  a lomítko ?
 
-2.sqrt // odmocnina z 2
+2.sqrt // odmocnina z 2, square root
 // bondka za dvojkou a nasledne slovo 'sqrt' je priklad objektovho pisania. V tomto pripade je objektom dvojka, s ktorou sa vykona operacia, (tzv. message), ktora je s objektom spojena znakom 'bodka'
 
 2.sqrt.log.cubed // odmocnina z 2 a nasledne jej logaritmus na tretiu
@@ -52,7 +56,7 @@ pi
 2 + (2 * 3)
 2 + 2 * 3 // na zatvorkach zalezi
 
-// Cislo je len cislo, zavisi na co ho pouzijeme. MOze to byt freqvencia, hlasitost, farba, cokolvek..
+// Cislo je len cislo, zavisi na co ho pouzijeme. Moze to byt freqvencia, hlasitost, farba, cokolvek..
 SimpleNumber.help
 
 
@@ -62,9 +66,15 @@ SimpleNumber.help
 //////////////////////////////////////
 
 [ 1, 2, 3]
+[ 1, 2, 3].class
+[ 1, 2, 3].at(2)
+[ 1, 2, 3].size
 [ 1, 2, 3] + 3.2
 
 a = [6,7,8,9]
+a
+a.class
+a.at(0)
 a[0] //6
 a[3].postln
 a.size
@@ -79,6 +89,8 @@ a.do({ |i| (i + 2).postln })
 
 String.help
 
+"supercollider".class
+String.help
 "supercollider".scramble // vyskusajte spustit viac krat po sebe ...
 
 // blok kodu je uzavrety v okruhlych zatvorkach:
@@ -94,6 +106,14 @@ a = "supercollider"
 a.do({ |i| i.ascii.postln })
 
 
+
+
+
+
+
+
+
+
 //////////////////////////////////////
 // Zvuk v SC
 //////////////////////////////////////
@@ -101,7 +121,9 @@ a.do({ |i| i.ascii.postln })
 // Do teraz sme pouzivali jen jeden program,   jazyk supercollideru = SCLANG
 // ak chceme robit so zvukom, potrebujeme spustit dalsi program, ktory sa postara o zvuk = SCSYNTH
 // tento program nazvali Audio Server a spusta sa prikazom:
-s.boot;
+s.boot; // Ctrl + b
+
+s.class
 
 // oba tieto programy si medzi sebou posielaju informacie/data, takze my pohodlne ostavame v SCLANGU
 
@@ -125,6 +147,9 @@ s.meter // hohoo
 // tymto prikazom sa nahrava vsetko co sa deje
 s.record("/home/paum/Recordings/audio.wav")
 s.stopRecording // nahravanie treba zastavit
+
+
+"Server".help
 
 
 
@@ -151,6 +176,8 @@ s.boot
 {SinOsc.ar(250) * 0.1}.play //  hra iba v jednom kanali
 
 
+
+
 //ctrl + .
 // prestalo hrat ?
 
@@ -171,8 +198,8 @@ s.boot
 (
 	{
 		SinOsc.ar(
-			MouseY.kr(50,800)  // frekvencia ovladana mysou
-			+ SinOsc.kr(5).range(-20,20) // vibrato
+			freq: MouseY.kr(50,800)  // frekvencia ovladana mysou
+			+ SinOsc.kr(freq: 5).range(-20,20) // vibrato
 		)
 		* 0.3 // hlasitost
 		! 2 // stereo
@@ -184,3 +211,25 @@ s.boot
 
 
 "Getting-Started-With-SC".help;
+
+
+
+
+
+
+
+///////////////////////////
+/// OOP
+
+Objekty -> Classes
+
+3.class
+
+3000.do( { "supercollider".postln }  )
+
+40.factorial
+
+40.0.class
+
+"fero".class
+"fero".at(1)

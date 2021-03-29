@@ -25,13 +25,20 @@ NetAddr.langPort; // 57120 alebo 57120
 s.boot // shift + enter, start audio servera
 
 
+Env.perc(0.1,5).plot
+Env.perc(0.1,5).test
+
+
 (
 	// definicia synthu
-	SynthDef(\bystrica, { | freq=200  amp=0.5 attack=0.1 release=1| // argunemty
+	SynthDef(\bystrica, {
+		| freq=200  amp=0.5 attack=0.1 release=1 | // argumenty
+		//arg freq=200,  amp=0.5, attack=0.1, release=1; // argumenty
 		var sig = Blip.ar(freq,22);
 		var env = Env.perc(attack,release).kr(2);
 		sig = sig * env * amp;
-		sig = Pan2.ar(sig,0);
+		// sig = Pan2.ar(sig,0);
+		sig = sig ! 2;
 		Out.ar(0,sig);
 	}).add;
 
@@ -69,6 +76,15 @@ s.boot // shift + enter, start audio servera
 Synth(\bystrica)
 Synth(\bystrica, [\freq,456] )
 Synth(\bystrica, [\freq,60, \amp, 0.5, \numHarm, rrand(1,50)  ] ) // spusti viac krat po sebe
+
+Synth(\bystrica, [\freq,rrand(100,200), \amp, 0.5, \numHarm, rrand(1,50)  ] ) // spusti viac krat po sebe
+
+60.midicps
+[ 60,62,64 ].midicps.choose
+
+Synth(\bystrica, [\freq, [ 60,62,64 ].midicps.choose / 2  , \amp, 0.5, \numHarm, rrand(1,50)  ] ) // spusti viac krat po sebe
+
+
 Synth(\bystrica, [\freq, rrand(50,150) ] )
 Synth(\bystrica, [\freq,100, \attack, 3 ,\release, 2]  )
 Synth(\bystrica, [\freq,100, \attack, 0.05 ,\release, 0.01]  )
@@ -79,6 +95,33 @@ Synth(\bystrica, [\freq,100, \attack, 0.05 ,\release, 0.01]  )
 	Synth(\bystrica, [\freq,100, \attack, 1 ,\release, 2]  );
 	Synth(\bystrica, [\freq,200, \attack, 1 ,\release, 2]  );
 )
+
+
+// kompozicia
+(
+	fork{
+		Synth(\bystrica, [\freq,100, \attack, 1 ,\release, 2]  );
+		1.wait;
+		// (60*60*24*365*639).wait;
+		Synth(\bystrica, [\freq,200, \attack, 1 ,\release, 2]  );
+	}
+)
+
+
+ 3.do({ "ahoj".postln })
+
+(
+
+	10.do({
+		Synth(\bystrica, [
+			\freq,rrand(50,200),
+			\attack, 1.0.rand ,
+			\release, 1.0.rand,
+			\amp, 0.1
+		]);
+	})
+)
+
 
 //MIDI 60 je c1
 60.midicps// 261.625 ... frekvencia tonu c1, prevedie MIDI hodnotu na frekbvenciu, cycles per second (to iste ako Hz)
