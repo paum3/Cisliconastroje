@@ -255,7 +255,6 @@ metadata: (
 ).add
 )
 
-s.plotTree
 
 
 a = Synth(\FMRhodes1, [\freq, 200])
