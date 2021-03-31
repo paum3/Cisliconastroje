@@ -32,6 +32,19 @@
 
 
 
+// tak ako v inych progamovacich jazykoch, poradie cisel sa zacina 0
+
+
+// jednotlive prikazy su od seba oddelene dvojbodkou;
+
+"aaa ".post; "bbb ".postln;
+
+
+"aaa ".post "bbb ".postln; // ERROR
+
+
+
+
 //////////////////////////////////////
 // Cisla            Cele cisla (Integers) a desatinne (Floats)
 //////////////////////////////////////
