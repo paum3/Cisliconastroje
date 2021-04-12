@@ -78,8 +78,9 @@ SynthDef(\fm, {
 	fork{
 
 
-		[3,1,4,5,9,2,6,5,3,5,8,9,8].do({ arg i;
+		[3,1,4,5,9,2,6,5,3,5,8,9,8].do({ arg i, index;
 				Synth(\fm,  [ \freq, ~pomery[i-1] * 60.midicps,\atk, 0.01, \rel, 0.1, \mRatio, 3.12.rand ]);
+				index.postln;
 				0.25.wait;
 		});
 
@@ -107,3 +108,61 @@ SynthDef(\fm, {
 
 5.rand // 0, 1 ,2, 3, 4
 5.0.rand // 0 - 4.999999999999999999999
+
+
+
+
+
+[1,2,3,4,5]
+(1..500).do({   \ahoj.postln;     })
+(500..1000).do({ arg i, index;  index.post;": ".post; i.postln;       })
+
+
+~pii.do({ arg i; ~pomery[i-1].postln;    })
+
+
+
+
+
+
+
+
+
+
+
+
+
+true
+false
+
+true.if({ \pravda.postln })
+false.if({ \pravda.postln }, { \nepravda.postln;})
+
+~pomery = [ 1.0, 1.1224620483089, 1.2599210498937, 1.3348398541685, 1.4983070768743, 1.6817928305039, 1.8877486253586,2, 1.1224620483089*2 ]
+~harmonia = ~pomery.scramble
+
+(
+
+	~hraj = true;
+	fork{
+
+
+		[3,1,4,5,9,2,6,5,3,5,8,9,8].do({ arg i, index;
+				Synth(\fm,  [ \freq, ~pomery[i-1] * 60.midicps,\atk, 0.1, \rel, 1.2, \mRatio, 4]);
+				Synth(\fm,  [ \freq, (~harmonia[i-1] * 60.midicps) / 2,\atk, 0.1, \rel, 1.2, \mRatio, 1]);
+
+				// ~hraj.if({
+				// 	Synth(\fm,  [ \freq, 60.midicps,\atk, 0.1, \rel, 1.2, \mRatio, 2]); // kazdy druhy krat
+				// 	~hraj = false;
+				// },{
+				// 	Synth(\fm,  [ \freq, 67.midicps,\atk, 0.1, \rel, 1.2, \mRatio, 2]); // kazdy druhy krat
+				// 	~hraj = true;
+				// });
+				index.postln;
+				0.5.wait;
+		});
+
+
+	}
+
+)
