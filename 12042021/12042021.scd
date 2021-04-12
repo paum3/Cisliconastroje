@@ -22,9 +22,24 @@ SynthDef(\fm, {
 }).add;
 )
 
+		Synth(\fm,  [ \freq, 60.midicps, \atk, 5, \rel, 4.5 ]);
+		Synth(\fm,  [ \freq, 60.midicps, \pan, 1.0.rand2 ]);
+		// pan < -1, 1 >
 
 
-Synth(\fm, [\freq, 60.midicps])
-Synth(\fm, [\freq, 62.midicps])
-Synth(\fm, [\freq, 64.midicps])
-Synth(\fm, [\freq, 66.midicps])
+(
+
+	fork{
+
+		Synth(\fm,  [ \freq, 60.midicps ]);
+		1.wait;
+
+		Synth(\fm, [\freq, 62.midicps]);
+
+		2.wait;
+		Synth(\fm, [\freq, 64.midicps]);
+		Synth(\fm, [\freq, 66.midicps]);
+
+	}
+
+)
