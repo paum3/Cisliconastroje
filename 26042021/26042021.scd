@@ -108,7 +108,7 @@ a.set(\gate,0)
 a = 8
 a + 10
 b = [3,4,56,6,7]
-c = Synth\dkfkjjglkdfjfgl
+c = Synth(\fm)
 
 
 (
@@ -116,6 +116,7 @@ c = Synth\dkfkjjglkdfjfgl
 	fork{
 		~dron = Synth(\fm_sustained, [\atk, 10, \rel, 10]);
 		5.wait;
+
 			20.do({
 				~dron.set(\pan, 1.0.rand2 ); // -1.0 ~ +1.0
 				~dron.set(\freq, 500.rand);
@@ -145,3 +146,24 @@ d.set(\gate,0)
 
 
 // MIDI
+//////
+
+
+// OSCdef
+// MIDIdef
+
+MIDIClient.init; // 1. spravi zo SC midi
+MIDIIn.connectAll; // 2.
+
+MIDIFunc.trace   /// check: post window, stlacaje na MIDI nastroji klavesy, gombiky
+MIDIFunc.trace(false) // vypnete
+
+MIDIFunc
+MIDIdef
+
+(
+	MIDIFunc.noteOn({ arg veloc, num, chan, src;
+		(num ++ " "++ veloc).postln;
+		Synth(\fm, [\freq, num.midicps]);
+	});
+)
